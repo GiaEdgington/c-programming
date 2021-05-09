@@ -14,3 +14,23 @@ int main(void){
     }
     return 0;
 }
+
+
+//if statements: youth hostel
+#include <stdio.h>
+int main(void){
+    int arrival;
+    int base_cost = 10;
+    int total_cost;
+    scanf("%d", &arrival);
+    if(arrival == 0){
+        total_cost = base_cost;
+    } else {
+       total_cost = base_cost+=arrival*5;
+    } 
+    if(base_cost > 53){
+         total_cost = 53;
+     }
+    printf("%d", total_cost);
+    return 0;
+}
