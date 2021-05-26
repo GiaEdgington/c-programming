@@ -3,8 +3,7 @@
 int main(void){
     int num, i, j;
     scanf("%d", &num);
-    int square = num * num;
-    for(i=0; i < square; i++){
+    for(i=0; i < num; i++){
         for(j=0; j < num; j++){
             printf("*");
         }
