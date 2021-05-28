@@ -4,11 +4,13 @@ int main(void){
     int population;
     scanf("%d", &population);
     int day = 2;
-    int infected = 3;
+    int total_infected = 3;
+    int new_infected;
     
-    while(infected < population){
+    while(total_infected < population){
         day=day+1;
-        infected=infected*2;
+        new_infected=total_infected*2;
+        total_infected+=new_infected;
     }
     printf("%d", day);
     return 0;
