@@ -6,7 +6,7 @@ int main(void){
     int i, t, l;
     i = 0;
     l = 0;
-    t = 0;
+    t = -1;
 
     while(word[l] != '\0') {
         l++;
@@ -14,13 +14,15 @@ int main(void){
     while(word[i] != '\0'){
         if((word[i] == 't' || word[i] == 'T') && (i <= l/2)){
             t = 1;
+            break;
         } else if((word[i] == 't' || word[i] == 'T') && (i > l/2)){
-            t = 2;
+           t = 2;
+           break;
         } else {
-            t = -1;
+            t=-1;
         }
+        i++;
     }
     printf("%d", t);
-    
     return 0;
 }
