@@ -7,20 +7,19 @@ int main(void){
     i = 0;
     l = 0;
     t = -1;
+    int found = 0;
 
     while(word[l] != '\0') {
         l++;
     }
-    while(word[i] != '\0'){
+    while(word[i] != '\0' && !found){
         if((word[i] == 't' || word[i] == 'T') && (i <= l/2)){
             t = 1;
-            break;
+            found = 1;
         } else if((word[i] == 't' || word[i] == 'T') && (i > l/2)){
            t = 2;
-           break;
-        } else {
-            t=-1;
-        }
+           found = 1;
+        } 
         i++;
     }
     printf("%d", t);
